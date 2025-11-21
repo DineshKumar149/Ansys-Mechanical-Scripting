@@ -1,0 +1,15 @@
+ns=Model.AddNamedSelection()
+ns.Name="pressure_faces"
+ns.Location
+selinfo=ExtAPI.SelectionManager.CurrentSelection
+selinfo
+ns.Location=selinfo
+ns.Location.Ids
+ns.Location.Ids.getType()
+ns.Location.Ids.GetType()
+ns.Location.Ids=selinfo.Ids
+pm=Model.Geometry.AddPointMass(_)
+pm=Model.Geometry.AddPointMass()
+pm.Location
+pm.Location=selinfo
+pm.Location=ns
