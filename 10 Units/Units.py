@@ -1,0 +1,20 @@
+f1=ExtAPI.DataModel.GeoData.GeoEntityById(159)
+f1
+f1.Centroid
+ExtAPI.DataModel.Project.UnitSystem
+ExtAPI.DataModel.Project.UnitSystem=UserUnitSystemType.StandardBIN
+ExtAPI.DataModel.Project.UnitSystem
+ExtAPI.DataModel.CurrentConsistentUnitFromQuantityName('Length')
+ExtAPI.DataModel.Project.UnitSystem=UserUnitSystemType.StandardMKS
+ExtAPI.DataModel.CurrentConsistentUnitFromQuantityName('Length')
+import units
+units.ConvertUnit(1000,'mm','m')
+Model.Analyses[0]
+Model.Analyses
+Model.GetChildren(DataModelCategory.Analysis,True)
+Model.GetChildren(DataModelObjectCategory.Analysis,True)
+a1=Model.GetChildren(DataModelObjectCategory.Analysis,True)[0]
+a1
+a1.Name
+units.ConvertToSolverConsistentUnit(100,'Length')
+units.ConvertToSolverConsistentUnit(ExtAPI,100,'Length',a1)
